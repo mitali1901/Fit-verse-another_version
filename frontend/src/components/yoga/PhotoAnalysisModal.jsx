@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { X, Upload, CheckCircle2, AlertTriangle, RefreshCw, Image as ImageIcon, Sparkles } from 'lucide-react';
 import { detectPoseInImage } from '../../utils/poseDetection';
-import { evaluatePose } from '../../utils/poseEvaluation';
+import { evaluateGenericPose } from '../../utils/poseEvaluation';
 import { drawPoseSkeleton } from '../../utils/correctionRenderer';
 
-export default function PhotoAnalysisModal({ isOpen, onClose, selectedPose }) {
+export default function PhotoAnalysisModal({ isOpen, onClose }) {
   const [imageSrc, setImageSrc] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [evaluation, setEvaluation] = useState(null);
@@ -49,8 +49,8 @@ export default function PhotoAnalysisModal({ isOpen, onClose, selectedPose }) {
         return;
       }
 
-      // Run evaluation
-      const evalResult = evaluatePose(selectedPose?.id || 'warrior_ii', landmarks);
+      // Run evaluation - use generic evaluator for any pose
+      const evalResult = evaluateGenericPose(landmarks);
       setEvaluation(evalResult);
 
       // Render skeleton overlay on canvas
@@ -84,10 +84,10 @@ export default function PhotoAnalysisModal({ isOpen, onClose, selectedPose }) {
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-fitverse-purple"></span>
-              <h3 className="text-xl font-bold text-fitverse-dark">Photo-Based Yoga Posture Analysis</h3>
+              <h3 className="text-xl font-bold text-fitverse-dark">Universal Posture Analysis</h3>
             </div>
             <p className="text-xs text-fitverse-muted mt-0.5">
-              Evaluating: <strong className="text-fitverse-purple font-semibold">{selectedPose?.name || "Warrior II"}</strong>
+              Upload any yoga or exercise pose for alignment feedback
             </p>
           </div>
           <button

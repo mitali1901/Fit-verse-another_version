@@ -213,7 +213,6 @@ export default function YogaStudio() {
       <PhotoAnalysisModal
         isOpen={isPhotoModalOpen}
         onClose={() => setIsPhotoModalOpen(false)}
-        selectedPose={selectedPose}
       />
     </div>
   );

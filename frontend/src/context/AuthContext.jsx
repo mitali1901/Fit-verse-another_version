@@ -10,8 +10,8 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     async function loadUser() {
-      if (authService.isAuthenticated()) {
-        try {
+      try {
+        if (authService.isAuthenticated()) {
           const profile = await authService.fetchMe();
           if (profile) {
             setUser(profile);
@@ -19,14 +19,15 @@ export function AuthProvider({ children }) {
           } else {
             setIsAuthenticated(false);
           }
-        } catch (e) {
-          console.error("Auth init error:", e);
+        } else {
           setIsAuthenticated(false);
         }
-      } else {
+      } catch (e) {
+        console.error("Auth init error:", e);
         setIsAuthenticated(false);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
     loadUser();
   }, []);

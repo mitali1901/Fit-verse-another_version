@@ -18,8 +18,8 @@ export default function AlignmentScoreGauge({
       <h3 className="font-bold text-sm text-fitverse-dark self-start">Alignment Score</h3>
 
       {/* Semi-circular Gauge */}
-      <div className="relative w-36 h-20 flex items-end justify-center my-1">
-        <svg className="w-36 h-36 -rotate-180 transform overflow-visible" viewBox="0 0 120 120">
+      <div className="relative w-28 h-20 flex items-center justify-center my-1">
+        <svg className="w-28 h-28 -rotate-180 transform overflow-visible" viewBox="0 0 120 120">
           {/* Background Arc */}
           <circle
             cx="60"
@@ -48,8 +48,8 @@ export default function AlignmentScoreGauge({
         </svg>
 
         {/* Center Score Display */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end">
-          <span className={`text-2xl font-black font-['Outfit'] tracking-tight ${isGood ? 'text-fitverse-green-success' : 'text-amber-500'}`}>
+        <div className="absolute inset-x-0 bottom-2 flex flex-col items-center justify-end">
+          <span className={`text-xl font-black font-['Outfit'] tracking-tight ${isGood ? 'text-fitverse-green-success' : 'text-amber-500'}`}>
             {safeScore}%
           </span>
         </div>

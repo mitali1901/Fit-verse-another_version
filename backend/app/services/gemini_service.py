@@ -47,13 +47,11 @@ class GeminiService:
 
         if api_key:
             try:
-                # Use Google GenAI SDK
-                from google import genai
-                client = genai.Client(api_key=api_key)
-                response = client.models.generate_content(
-                    model='gemini-2.5-flash',
-                    contents=prompt
-                )
+                # Use Google Generative AI SDK
+                import google.generativeai as genai
+                genai.configure(api_key=api_key)
+                model = genai.GenerativeModel('gemini-1.5-flash')
+                response = model.generate_content(prompt)
                 if response and response.text:
                     return response.text.strip()
             except Exception as e:

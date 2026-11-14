@@ -60,6 +60,10 @@ export function drawPoseSkeleton(ctx, landmarks, evaluation, width, height) {
 
   const segments = evaluation?.segments || {};
   const criticalJoint = evaluation?.criticalJoint;
+  const alignmentScore = evaluation?.alignmentScore || 0;
+
+  // If not in pose (empty segments or 0 score), default all to red
+  const notInPose = Object.keys(segments).length === 0 || alignmentScore === 0;
 
   // Direct 1:1 canvas mapping for normalized landmarks
   const toX = (normX) => normX * width;
@@ -74,7 +78,8 @@ export function drawPoseSkeleton(ctx, landmarks, evaluation, width, height) {
       return;
     }
 
-    const isAligned = segments[segment] !== false; // Default to green unless explicitly false
+    // Force red if not in pose, otherwise use segment alignment
+    const isAligned = notInPose ? false : (segments[segment] !== false);
     const lineColor = isAligned ? GREEN_COLOR : RED_COLOR;
     const glowColor = isAligned ? GREEN_GLOW : RED_GLOW;
 
@@ -132,18 +137,20 @@ export function drawPoseSkeleton(ctx, landmarks, evaluation, width, height) {
     const x = toX(pt.x);
     const y = toY(pt.y);
 
-    // Determine joint color
-    let isJointAligned = true;
-    if (jointIdx === LM.LEFT_ELBOW || jointIdx === LM.LEFT_WRIST) {
-      isJointAligned = segments["left_arm"] !== false;
-    } else if (jointIdx === LM.RIGHT_ELBOW || jointIdx === LM.RIGHT_WRIST) {
-      isJointAligned = segments["right_arm"] !== false;
-    } else if (jointIdx === LM.LEFT_KNEE || jointIdx === LM.LEFT_ANKLE) {
-      isJointAligned = segments["left_leg"] !== false;
-    } else if (jointIdx === LM.RIGHT_KNEE || jointIdx === LM.RIGHT_ANKLE) {
-      isJointAligned = segments["right_leg"] !== false;
-    } else if (jointIdx === LM.LEFT_SHOULDER || jointIdx === LM.RIGHT_SHOULDER || jointIdx === LM.LEFT_HIP || jointIdx === LM.RIGHT_HIP) {
-      isJointAligned = segments["torso"] !== false;
+    // Determine joint color - force red if not in pose
+    let isJointAligned = !notInPose; // Default to aligned, unless not in pose
+    if (!notInPose) {
+      if (jointIdx === LM.LEFT_ELBOW || jointIdx === LM.LEFT_WRIST) {
+        isJointAligned = segments["left_arm"] !== false;
+      } else if (jointIdx === LM.RIGHT_ELBOW || jointIdx === LM.RIGHT_WRIST) {
+        isJointAligned = segments["right_arm"] !== false;
+      } else if (jointIdx === LM.LEFT_KNEE || jointIdx === LM.LEFT_ANKLE) {
+        isJointAligned = segments["left_leg"] !== false;
+      } else if (jointIdx === LM.RIGHT_KNEE || jointIdx === LM.RIGHT_ANKLE) {
+        isJointAligned = segments["right_leg"] !== false;
+      } else if (jointIdx === LM.LEFT_SHOULDER || jointIdx === LM.RIGHT_SHOULDER || jointIdx === LM.LEFT_HIP || jointIdx === LM.RIGHT_HIP) {
+        isJointAligned = segments["torso"] !== false;
+      }
     }
 
     if (jointIdx === criticalJoint) {
