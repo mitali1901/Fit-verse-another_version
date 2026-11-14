@@ -139,7 +139,7 @@ export default function SessionSummaryModal({
                 <span>Saved Successfully!</span>
               </>
             ) : (
-              <span>Save Session & Return to Dashboard</span>
+              <span>Save Session & Return to Home</span>
             )}
           </button>
         </div>

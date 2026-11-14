@@ -34,18 +34,17 @@ export default function WelcomeBanner({ userName = "User" }) {
         </div>
       </div>
 
-      {/* Right: Realistic High-Quality Yoga Photography */}
+      {/* Right: Yoga Practice Image */}
       <div className="relative mt-6 md:mt-0 flex items-center justify-center shrink-0">
-        <div className="w-48 h-36 md:w-56 md:h-40 rounded-2xl overflow-hidden shadow-md border-2 border-white/80 bg-fitverse-lavender relative group">
+        <div
+          className="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 aspect-square rounded-2xl overflow-hidden shadow-sm border border-[#E9D6F7] p-1.5 flex items-center justify-center select-none"
+          style={{ backgroundColor: '#FFFFFF' }}
+        >
           <img
-            src="/assets/yoga_meditation_real.jpg"
-            alt="Mindful Yoga Meditation"
-            className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+            src="/assets/fitverse_yoga_home.webp"
+            alt="Yoga Practice"
+            className="w-full h-full object-contain rounded-xl select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-          <div className="absolute bottom-2 left-2.5 px-2 py-0.5 rounded-full bg-white/80 backdrop-blur-xs text-[10px] font-bold text-fitverse-dark">
-            🧘 Mindful Practice
-          </div>
         </div>
       </div>
     </div>

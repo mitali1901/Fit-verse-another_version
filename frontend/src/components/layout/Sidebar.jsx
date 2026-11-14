@@ -7,7 +7,7 @@ export default function Sidebar() {
   const location = useLocation();
 
   const navItems = [
-    { to: "/", label: "Dashboard", icon: LayoutGrid },
+    { to: "/", label: "Home", icon: LayoutGrid },
     { to: "/yoga-studio", label: "Yoga Studio", icon: Flower2 },
     { to: "/assistant", label: "AI Assistant", icon: MessageSquareCode },
     { to: "/profile", label: "Profile", icon: User },

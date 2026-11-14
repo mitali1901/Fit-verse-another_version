@@ -14,7 +14,7 @@ export default function TopHeader() {
     if (path === '/studio' || path === '/yoga-studio') return { title: 'AI Yoga Studio', icon: Flower2 };
     if (path === '/assistant') return { title: 'AI Fitness Assistant', icon: Flower2 };
     if (path === '/profile') return { title: 'My Profile', icon: UserIcon };
-    return { title: 'Dashboard', icon: LayoutGrid };
+    return { title: 'Home', icon: LayoutGrid };
   };
 
   const { title, icon: HeaderIcon } = getHeaderInfo();
