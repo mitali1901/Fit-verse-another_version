@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none">
+  <!-- Soft circular background aura -->
+  <circle cx="80" cy="70" r="58" fill="#EAF6E8"/>
+  <circle cx="80" cy="70" r="50" fill="#DEF0DB" opacity="0.6"/>
+
+  <!-- Tree Pose silhouette -->
+  <!-- Head -->
+  <circle cx="80" cy="30" r="8" fill="#5BA352"/>
+  <!-- Hands overhead in prayer -->
+  <path d="M80 18 L76 22 L84 22 Z" fill="#5BA352"/>
+  <path d="M76 38 Q70 24 78 20" stroke="#72B868" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M84 38 Q90 24 82 20" stroke="#72B868" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Torso upright -->
+  <path d="M77 38 L83 38 L82 72 L78 72 Z" fill="#72B868"/>
+  <!-- Standing leg straight down -->
+  <path d="M79 72 L79 116" stroke="#5BA352" stroke-width="6" stroke-linecap="round"/>
+  <!-- Bent leg foot resting on inner knee/thigh -->
+  <path d="M81 74 L98 88 L81 92" stroke="#5BA352" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Mat baseline -->
+  <line x1="40" y1="118" x2="120" y2="118" stroke="#CDEAC8" stroke-width="3" stroke-linecap="round"/>
+</svg>

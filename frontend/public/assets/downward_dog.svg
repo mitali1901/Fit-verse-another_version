@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none">
+  <!-- Soft circular background aura -->
+  <circle cx="80" cy="70" r="58" fill="#FCE8DF"/>
+  <circle cx="80" cy="70" r="50" fill="#F8DDD1" opacity="0.6"/>
+
+  <!-- Downward-Facing Dog silhouette (Inverted V) -->
+  <!-- Hip apex high up at (80, 48) -->
+  <circle cx="80" cy="48" r="6" fill="#D97A52"/>
+  <!-- Torso & Arms down to hands at (42, 114) -->
+  <path d="M78 50 L60 76 L44 114" stroke="#D97A52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Head tucked between upper arms -->
+  <circle cx="56" cy="80" r="7" fill="#E88F68"/>
+  <!-- Legs down to feet at (118, 114) -->
+  <path d="M82 50 L100 80 L118 114" stroke="#D97A52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Mat baseline -->
+  <line x1="28" y1="116" x2="132" y2="116" stroke="#F5CABA" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
+  <!-- Body glow/aura -->
+  <ellipse cx="100" cy="160" rx="70" ry="20" fill="#E8D5F7" opacity="0.4"/>
+  <!-- Legs crossed lotus position -->
+  <ellipse cx="100" cy="165" rx="55" ry="28" fill="#C9A0DC" opacity="0.5"/>
+  <ellipse cx="55" cy="172" rx="14" ry="8" fill="#B589CC"/>
+  <ellipse cx="145" cy="172" rx="14" ry="8" fill="#B589CC"/>
+  <!-- Torso -->
+  <rect x="82" y="105" width="36" height="55" rx="16" fill="#A875D5"/>
+  <!-- Left arm to left knee -->
+  <path d="M82 125 Q62 145 68 165" stroke="#A875D5" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Right arm to right knee -->
+  <path d="M118 125 Q138 145 132 165" stroke="#A875D5" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Neck -->
+  <rect x="92" y="95" width="16" height="16" rx="7" fill="#F5C6A0"/>
+  <!-- Head -->
+  <circle cx="100" cy="78" r="28" fill="#F5C6A0"/>
+  <!-- Hair bun -->
+  <ellipse cx="100" cy="52" rx="18" ry="12" fill="#5C3A1E"/>
+  <circle cx="100" cy="48" r="10" fill="#5C3A1E"/>
+  <!-- Eyes -->
+  <ellipse cx="92" cy="76" rx="3" ry="4" fill="#333" opacity="0.7"/>
+  <ellipse cx="108" cy="76" rx="3" ry="4" fill="#333" opacity="0.7"/>
+  <!-- Smile -->
+  <path d="M93 86 Q100 90 107 86" stroke="#C0725A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Eyebrows -->
+  <path d="M89 70 Q92 68 95 70" stroke="#5C3A1E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M105 70 Q108 68 111 70" stroke="#5C3A1E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Lotus base -->
+  <ellipse cx="100" cy="193" rx="40" ry="12" fill="#F2E8FA"/>
+  <path d="M80 193 Q100 175 120 193" fill="#DEC5F0"/>
+  <path d="M70 196 Q100 178 130 196" fill="#F2E8FA" opacity="0.7"/>
+  <ellipse cx="100" cy="193" rx="15" ry="8" fill="#E8D5F7"/>
+  <!-- Sparkles -->
+  <circle cx="150" cy="90" r="3" fill="#A875D5" opacity="0.5"/>
+  <circle cx="160" cy="110" r="2" fill="#C9A0DC" opacity="0.4"/>
+  <circle cx="45" cy="100" r="2.5" fill="#A875D5" opacity="0.4"/>
+  <circle cx="35" cy="125" r="2" fill="#C9A0DC" opacity="0.3"/>
+  <!-- Hands in mudra -->
+  <circle cx="68" cy="166" r="7" fill="#F5C6A0"/>
+  <circle cx="132" cy="166" r="7" fill="#F5C6A0"/>
+  <!-- Third eye dot -->
+  <circle cx="100" cy="71" r="2.5" fill="#A875D5" opacity="0.8"/>
+</svg>
+

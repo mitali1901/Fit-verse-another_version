@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" fill="none">
+  <!-- Silhouette of meditating yogi, simplified elegant -->
+  <!-- Legs in lotus -->
+  <ellipse cx="80" cy="140" rx="55" ry="22" fill="#C9A0DC" opacity="0.3"/>
+  <ellipse cx="40" cy="145" rx="12" ry="7" fill="#A875D5" opacity="0.3"/>
+  <ellipse cx="120" cy="145" rx="12" ry="7" fill="#A875D5" opacity="0.3"/>
+  <!-- Torso -->
+  <rect x="65" y="88" width="30" height="48" rx="13" fill="#A875D5" opacity="0.35"/>
+  <!-- Left arm -->
+  <path d="M66 108 Q48 128 50 142" stroke="#A875D5" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- Right arm -->
+  <path d="M94 108 Q112 128 110 142" stroke="#A875D5" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.35"/>
+  <!-- Neck -->
+  <rect x="74" y="78" width="12" height="14" rx="5" fill="#A875D5" opacity="0.3"/>
+  <!-- Head -->
+  <circle cx="80" cy="62" r="22" fill="#A875D5" opacity="0.3"/>
+  <!-- Hair bun -->
+  <ellipse cx="80" cy="42" rx="13" ry="9" fill="#7B4FA6" opacity="0.35"/>
+  <!-- Lotus petals at base -->
+  <path d="M50 158 Q80 142 110 158" fill="#E8D5F7" opacity="0.5"/>
+  <path d="M40 162 Q80 144 120 162" fill="#F2E8FA" opacity="0.4"/>
+  <!-- Leaves/plants for decoration -->
+  <path d="M10 90 Q25 70 20 50" stroke="#A8D89B" stroke-width="3" fill="none" opacity="0.5"/>
+  <ellipse cx="22" cy="52" rx="10" ry="15" fill="#A8D89B" opacity="0.3" transform="rotate(-20 22 52)"/>
+  <path d="M150 95 Q135 75 140 55" stroke="#A8D89B" stroke-width="3" fill="none" opacity="0.5"/>
+  <ellipse cx="138" cy="57" rx="10" ry="15" fill="#A8D89B" opacity="0.3" transform="rotate(20 138 57)"/>
+</svg>
+

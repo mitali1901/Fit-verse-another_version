@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none">
+  <!-- Soft circular background aura -->
+  <circle cx="80" cy="70" r="58" fill="#F4EAFB"/>
+  <circle cx="80" cy="70" r="50" fill="#EAE0F5" opacity="0.6"/>
+
+  <!-- Warrior II silhouette -->
+  <!-- Torso upright centered -->
+  <path d="M78 50 L84 50 L86 78 L76 78 Z" fill="#A875D5"/>
+  <!-- Head -->
+  <circle cx="81" cy="40" r="9" fill="#935EC2"/>
+  <!-- Left arm extending backward -->
+  <path d="M77 54 L36 56" stroke="#A875D5" stroke-width="5" stroke-linecap="round"/>
+  <!-- Right arm extending forward -->
+  <path d="M85 54 L126 55" stroke="#A875D5" stroke-width="5" stroke-linecap="round"/>
+  <!-- Front leg bent at ~90 degrees -->
+  <path d="M84 76 L112 86 L112 116" stroke="#935EC2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Back leg straight extending back -->
+  <path d="M78 76 L48 98 L36 116" stroke="#935EC2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Mat baseline -->
+  <line x1="24" y1="118" x2="136" y2="118" stroke="#DEC5F0" stroke-width="3" stroke-linecap="round"/>
+</svg>
